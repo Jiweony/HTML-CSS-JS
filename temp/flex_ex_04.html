@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>flex direction : 방향</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* 해상도 1920px에서 스타일 */
+    .flex-container {
+      background-color: #ccc;
+      display: flex;
+      justify-content: center;
+
+      flex-direction: row; /* 왼 -> 오른쪽으로 아이템(상자) 배치 */
+    }
+
+    .item {
+      background-color: blue;
+      width: 400px;
+      height: 400px;
+      margin: 10px;
+    }
+    
+    /* 해상도 800px에서 스타일 -> 변경시키고 싶은 스타일만 기입*/
+    @media (max-width:800px){
+      .flex-container {
+      background-color: lightgray;
+      /* display: flex -> inline 타입으로 변경 */
+      display: flex;      
+      flex-direction: column; /* 위 -> 아래로 아이템(상자) 배치 */
+    }
+
+    .item {
+      background-color: blue;
+      width: 100%;
+      height: 400px;
+      margin: 10px 0;
+    }
+  }
+
+  @media (max-width:500px){
+    .flex-container {
+      background-color: gray;
+    }
+
+    .item {
+      margin: 20px 0;
+    }
+  }
+
+  </style>
+</head>
+<body>
+  <div class="flex-container">
+    <div class="item">Item 1</div>
+    <div class="item">Item 2</div>
+    <div class="item">Item 3</div>
+  </div>
+</body>
+</html>
