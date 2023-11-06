@@ -1,1 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap');
+
+    /* 리셋 시작 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    ul li {
+      list-style: none;
+    }
+
+    /* 리셋 끝 */
+    header,
+    main {
+      font-family: 'Noto Sans KR', sans-serif;
+    }
+
+    nav {
+      background-color: white;
+    }
+
+    .nav-wrap {
+      width: 1400px;
+      margin: 0 auto;
+      padding: 20px 0;
+      color: black;
+
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .nav-wrap #logo {
+      margin-top: 17px;
+    }
+
+    .nav-wrap ul {
+      display: flex;
+      margin-top: 17px;
+    }
+
+    .nav-wrap ul li {
+      list-style: none;
+      font-size: 25px;
+      margin-left: 20px;
+    }
+
+    .nav-wrap ul li i {
+      color: #e23828;
+    }
+
+    .nav-wrap ul li:nth-child(-n+3) {
+      margin-right: 50px;
+    }
+
+    .nav-wrap ul li .gap {
+      margin-right: 5px;
+    }
+
+    /* 배너이미지 설정 */
+    .bg {
+      width: 100%;
+      height: 500px;
+      background-image: url('../images/img1.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      background-color: lightgray;
+    }
+
+    /* 중간버튼 설정 */
+    .category ul {
+      display: flex;
+      justify-content: center;
+      margin-top: 30px;
+    }
+
+    .category ul li {
+      background-color: transparent;
+      color: black;
+      font-size: 25px;
+      border: 2px solid lightgrey;
+      border-radius: 30px;
+      padding: 0px 40px;
+      margin-right: 50px;
+    }
+
+    .category ul li:hover {
+      border: 2px solid #e23828;
+      cursor: pointer;
+
+    }
+
+    /* 이미지 설정 */
+    main section {
+      padding: 100px 0;
+    }
+
+    main section:nth-child(odd) {
+      background-color: #f7f7f7;
+    }
+
+    .section-wrap {
+      width: 1400px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      margin-bottom: 100px;
+      text-align: center;
+    }
+
+    .section-title h3 {
+      margin-top: 5px;
+      font-size: 20px;
+    }
+
+    .section-title h1 {
+      font-size: 50px;
+      margin-top: -10px;
+    }
+    
+    .section-content {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .img-box {
+      width: 460px;
+      overflow: hidden;
+    }
+
+    img {
+      width: 100%;
+      height: 100%;
+      transition: 0.5s;
+    }
+
+    img:hover {
+      transform: scale(1.3);
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .dc {
+      font-size: 24px;
+      color: tomato;
+      font-weight: bold;
+    }
+
+    .item-price p {
+      margin-top: 10px;
+      text-align: justify;
+    }
+
+    .img-content {
+      padding: 25px;
+    }
+  </style>
+</head>
+
+
+
+<body>
+  <header>
+    <nav>
+      <div class="nav-wrap">
+        <div id="logo"><h2>로고들어갈곳</h2></div>
+        <ul>
+          <li><i class="fa-solid fa-pizza-slice gap"></i> 바로주문</li>
+          <li><i class="fa-solid fa-gift gap"></i> 이벤트</li>
+          <li><i class="fa-solid fa-user gap"></i> 내정보</li>
+          <li><i class="fa-solid fa-cart-shopping fa-lg"></i></li>
+          <li><i class="fa-solid fa-bars fa-lg"></i></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="bg">
+      <div class="bg-wrap">
+        <div class="bg-content">
+          <img src="" alt="">
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <div class="category-wrap">
+      <div class="category">
+        <ul>
+          <li>프리미엄 피자</li>
+          <li>클래식 피자</li>
+          <li>사이드</li>
+          <li>음료</li>
+        </ul>
+      </div>
+      <aside>
+        <div id="aside">
+          <ul>
+            <li>로그인</li>
+            <li>회원가입</li>
+            <li></li>
+          </ul>
+        </div>
+      </aside>
+    </div>
+
+    <section>
+      <div class="section-wrap">
+
+        <div class="section-title">
+          <h1>프리미엄 피자</h1>
+          <h3>프리미엄 토핑으로 더욱 특별하고 풍성하게 즐기는 피자</h3>
+        </div>
+
+        <div class="section-content">
+          <div class="img-wrap">
+            <div class="img-box">
+              <img src="images/img2.jpg" alt="메인이미지1">
+            </div>
+            <div class="img-content">
+              <h2 class="item-name">피자1</h2>
+              <div class="item-price">
+                <input type="radio" name="mprice" id="mprice" checked> M 25,500
+                <input type="radio" name="lprice" id="lprice"> L 33,500
+              </div>
+            </div>
+          </div>
+
+          <div class="img-wrap">
+            <div class="img-box">
+              <img src="images/img3.jpg" alt="메인이미지2">
+            </div>
+            <div class="img-content">
+              <h2 class="item-name">피자2</h2>
+              <div class="item-price">
+                <input type="radio" name="mprice" id="mprice" checked> M 25,500
+                <input type="radio" name="lprice" id="lprice"> L 33,500
+              </div>
+            </div>
+          </div>
+
+          <div class="img-wrap">
+            <div class="img-box">
+              <img src="images/img4.jpg" alt="메인이미지3">
+            </div>
+            <div class="img-content">
+              <h2 class="item-name">피자3</h2>
+              <div class="item-price">
+                <input type="radio" name="mprice" id="mprice" checked> M 25,500
+                <input type="radio" name="lprice" id="lprice"> L 33,500
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+</body>
+
+</html>
