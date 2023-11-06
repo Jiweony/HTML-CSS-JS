@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상단 광고 부분</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+    
+    /* pc -> mobile 순으로 해상도 조절 */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+    }
+
+    .container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .flex-container {
+      width: 100%;
+      max-width: 1280px;
+    }
+
+    .adv-box {
+      background-color: blue;
+      color: #fff;
+      padding: 8px 0;
+      text-align: center;
+      flex: 1;
+    }
+    /* 해상도가 800px로 줄어들었을 때 */
+    @media(max-width:800px) {
+    
+    }
+
+    /* 해상도가 800px로 줄어들었을 때 */
+    @media(max-width:500px) {
+      
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="flex-container">
+      <div class="adv-box">
+        Koreait Academy Advertisement 
+      </div>    
+    </div>
+  </div>
+</body>
+</html>
