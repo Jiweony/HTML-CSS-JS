@@ -23,17 +23,16 @@
       list-style: none;
     }
 
-    /* 리셋 끝 */
 
-
-
-    /* 상단 메뉴 설정 */
+    /* 헤더/ 상단메뉴 스타일 시작 */
     header,
-    main {
+    main,
+    footer {
       font-family: 'Noto Sans KR', sans-serif;
     }
 
     nav {
+      width: 100%;
       padding-bottom: 20px;
     }
 
@@ -49,6 +48,7 @@
 
     .nav-wrap #logo {
       margin-top: 20px;
+      font-size: 20px;
     }
 
     .nav-wrap ul {
@@ -87,18 +87,19 @@
       margin-right: 50px;
     }
 
+
     /* 배너이미지 설정 */
     .bg {
       width: 100%;
-      height: 500px;
-      background-image: url('../images/img1.jpg');
+      height: 360px;
+      background-image: url('./images/banner1.png');
       background-repeat: no-repeat;
       background-size: cover;
-      background-position: center;
+      /* background-position: center; */
       background-color: lightgray;
     }
 
-    /* 중간버튼 설정 */
+    /* 카테고리/중간버튼 스타일 시작 */
     .category {
       width: 1280px;
       margin: 0 auto;
@@ -108,9 +109,14 @@
       display: flex;
       justify-content: center;
       margin-top: 40px;
+      padding-top: 7px;
       background-color: transparent;
       border-radius: 8px;
-      box-shadow: 1px 1px 1px 1px rgba(90, 91, 95, 0.2);
+      box-shadow: 0 0 5px 0 rgba(90, 91, 95, 0.4);
+    }
+
+    .category .address ul:hover {
+      cursor: pointer;
     }
 
     .category .address ul li {
@@ -141,7 +147,8 @@
       display: flex;
       justify-content: left;
       background-color: white;
-      box-shadow: 0 0 5px 0 rgba(90, 91, 95, 0.2);
+      border-radius: 8px;
+      box-shadow: 0 0 5px 0 rgba(90, 91, 95, 0.4);
     }
 
     .category .order-btn ul div {
@@ -149,17 +156,23 @@
       margin-left: 15px;
     }
 
+    .category .order-btn ul:hover {
+      cursor: pointer;
+      border: 0;
+      border: 3px solid #cf152d
+    }
+
     .category .order-btn ul li:nth-child(2) {
       font-size: 30px;
       margin: 27px 0 0 170px;
     }
 
-    .category .order-btn ul > li .arrow1 {
+    .category .order-btn ul>li .arrow1 {
       margin-left: 180px;
       color: #cf152d;
     }
 
-    .category .order-btn ul > li .arrow2 {
+    .category .order-btn ul>li .arrow2 {
       margin-left: 190px;
       color: #cf152d;
     }
@@ -170,54 +183,55 @@
     }
 
     .category .order-btn ul:nth-child(2) li img {
-      width:70px;
+      width: 70px;
       height: 70px;
     }
 
 
-    /* 콘텐츠 이미지 설정 */
+    /* 이벤트/할인 섹션 스타일 시작 */
     main section {
-      padding: 70px 0;
-    }
-
-    main section:nth-child(odd) {
-      background-color: #f7f7f7;
+      background-color: #f6f6f6;
+      height: 400px;
+      margin-top: 40px;
     }
 
     .section-wrap {
-      width: 1400px;
+      width: 1280px;
       margin: 0 auto;
+      padding: 40px 0;
+      display: flex;
+      justify-content: space-between;
     }
 
     .section-title {
-      margin-bottom: 100px;
-      text-align: center;
-    }
-
-    .section-title h3 {
-      margin-top: 5px;
-      font-size: 20px;
+      margin-bottom: 180px;
+      text-align: left;
     }
 
     .section-title h1 {
-      font-size: 50px;
+      font-size: 40px;
+    }
+
+    .section-title h1:nth-child(3) {
+      margin-top: -10px;
     }
 
     .section-content {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
+      display: flex;
+      justify-content: space-between;
       text-align: center;
     }
 
     .img-wrap {
-      margin-top: 20px;
+      background-color: white;
+      margin-left: 20px;
+      border-radius: 8px;
     }
 
     .img-wrap:hover {
+      cursor: pointer;
       border-radius: 8px;
-      box-shadow: 3px 3px 3px 3px rgba(90, 91, 95, 0.4);
-      /* 부드럽게 스타일 변경 : transition */
-      transition: all 0.5s ease-in-out;
+      transform: translateY(-15px);
     }
 
     .img-box {
@@ -230,17 +244,6 @@
       height: 100%;
     }
 
-    .dc {
-      font-size: 24px;
-      color: tomato;
-      font-weight: bold;
-    }
-
-    .item-price input {
-      margin-top: 15px;
-      text-align: justify;
-    }
-
     .item-price input:nth-child(2) {
       margin-left: 7px;
     }
@@ -248,9 +251,50 @@
     .img-content {
       padding: 25px;
     }
+
+    /* footer 스타일 시작 */
+    footer {
+      background-color: #222;
+      padding: 40px 0 10px 0;
+    }
+
+    .footer-wrap {
+      width: 1280px;
+      margin: 0 auto;
+    }
+
+    .footer-wrap h2 {
+      color: white;
+      letter-spacing: 2px;
+      font-size: 25px;
+    }
+
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .footer-top span {
+      color: white;
+      font-size: 30px;
+      margin-left: 15px;
+    }
+
+    .footer-top span i:hover {
+      color: gray;
+      transition: 0.5s;
+      cursor: pointer;
+    }
+
+    .footer-bottom {
+      margin-top: 30px;
+      font-size: 20px;
+      color: white;
+      border-top: 1px solid white;
+      text-align: center;
+    }
   </style>
 </head>
-
 
 
 <body>
@@ -277,7 +321,7 @@
     <div class="bg">
       <div class="bg-wrap">
         <div class="bg-content">
-          <img src="" alt="">
+          <!-- <img src="./images/banner1.png" alt=""> -->
         </div>
       </div>
     </div>
@@ -295,14 +339,14 @@
 
         <div class="order-btn">
           <ul>
-            <div class="order-image1">
+            <div>
               <li><img src="./images/motorbike2.png" alt=""></li>
             </div>
             <li>배달 주문<i class="fa-regular fa-circle-right arrow1"></i></li>
           </ul>
 
           <ul>
-            <div class="order-image2">
+            <div>
               <li><img src="./images/togo.png" alt=""></li>
             </div>
             <li>포장 주문<i class="fa-regular fa-circle-right arrow2"></i></li>
@@ -312,12 +356,14 @@
       </div>
     </div>
 
-    <!-- <section>
+    <section>
       <div class="section-wrap">
 
         <div class="section-title">
-          <h1>프리미엄 피자</h1>
-          <h3>프리미엄 토핑으로 더욱 특별하고 풍성하게 즐기는 피자</h3>
+          <h2>코리아 피자</h2>
+          <h1>이벤트/할인</h1>
+          <h1>안내</h1>
+          <div></div>
         </div>
 
         <div class="section-content">
@@ -326,11 +372,7 @@
               <img src="./images/pizza1.jpg" alt="메인이미지1">
             </div>
             <div class="img-content">
-              <h2 class="item-name">피자1</h2>
-              <div class="item-price">
-                <input type="radio" name="radio1" id="mprice1" checked> M 25,500
-                <input type="radio" name="radio1" id="lprice1"> L 33,500
-              </div>
+              <h2 class="item-name">광고1</h2>
             </div>
           </div>
 
@@ -339,11 +381,7 @@
               <img src="./images/pizza2.jpg" alt="메인이미지2">
             </div>
             <div class="img-content">
-              <h2 class="item-name">피자2</h2>
-              <div class="item-price">
-                <input type="radio" name="radio2" id="mprice2" checked> M 25,500
-                <input type="radio" name="radio2" id="lprice2"> L 33,500
-              </div>
+              <h2 class="item-name">광고2</h2>
             </div>
           </div>
 
@@ -352,60 +390,33 @@
               <img src="./images/pizza3.jpg" alt="메인이미지3">
             </div>
             <div class="img-content">
-              <h2 class="item-name">피자3</h2>
-              <div class="item-price">
-                <input type="radio" name="radio3" id="mprice3" checked> M 25,500
-                <input type="radio" name="radio3" id="lprice3"> L 33,500
-              </div>
-            </div>
-          </div>
-
-
-          <div class="img-wrap">
-            <div class="img-box">
-              <img src="./images/pizza4.jpg" alt="메인이미지2">
-            </div>
-            <div class="img-content">
-              <h2 class="item-name">피자4</h2>
-              <div class="item-price">
-                <input type="radio" name="radio4" id="mprice4" checked> M 25,500
-                <input type="radio" name="radio4" id="lprice4"> L 33,500
-              </div>
-            </div>
-          </div>
-
-          <div class="img-wrap">
-            <div class="img-box">
-              <img src="./images/pizza5.jpg" alt="메인이미지2">
-            </div>
-            <div class="img-content">
-              <h2 class="item-name">피자5</h2>
-              <div class="item-price">
-                <input type="radio" name="radio5" id="mprice5" checked> M 25,500
-                <input type="radio" name="radio6" id="lprice5"> L 33,500
-              </div>
-            </div>
-          </div>
-
-          <div class="img-wrap">
-            <div class="img-box">
-              <img src="./images/pizza6.jpg" alt="메인이미지2">
-            </div>
-            <div class="img-content">
-              <h2 class="item-name">피자6</h2>
-              <div class="item-price">
-                <input type="radio" name="radio6" id="mprice6" checked> M 25,500
-                <input type="radio" name="radio6" id="lprice6"> L 33,500
-              </div>
+              <h2 class="item-name">광고3</h2>
             </div>
           </div>
 
         </div>
 
-
       </div>
-    </section> -->
+    </section>
   </main>
+
+  <footer>
+    <div class="footer-wrap">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <h2>LOGO</h2>
+        </div>
+
+        <div class="footer-sns">
+          <span><i class="fa-brands fa-square-facebook"></i></span>
+          <span><i class="fa-brands fa-google"></i></span>
+          <span><i class="fa-brands fa-instagram"></i></span>
+        </div>
+      </div>
+
+      <div class="footer-bottom">Copyright &copy; 2023 KOREAGROUP.ALL RIGHTS RESERVED</div>
+    </div>
+  </footer>
 
 </body>
 
