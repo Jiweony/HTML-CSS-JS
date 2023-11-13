@@ -27,10 +27,19 @@
       font-family: 'Noto Sans KR', sans-serif;
     }
 
+    a {
+      color: black;
+      text-decoration: none;
+    }
+
     /* 헤더/ 상단메뉴 스타일 시작 */
     nav {
+      border: 0;
       width: 100%;
       padding-bottom: 20px;
+      box-shadow: 0px 0px 5px 0 rgba(90, 91, 95, 0.4);
+      position: fixed;
+      background-color: white;
     }
 
     .nav-wrap {
@@ -44,8 +53,14 @@
     }
 
     .nav-wrap #logo {
-      margin-top: 20px;
-      font-size: 20px;
+      font-size: 23px;
+      height: 50px;
+    }
+
+    .nav-wrap #logo img {
+      width: 100%;
+      height: 150px;
+      margin-top: -30px;
     }
 
     .nav-wrap ul {
@@ -87,13 +102,13 @@
 
     /* 배너이미지 설정 */
     .bg {
+      padding-top: 480px; 
       width: 100%;
-      height: 340px;
       background-image: url('./images/banner.png');
       background-repeat: no-repeat;
-      background-size: cover;
-      background-position: center;
-      background-color: lightgray;
+      /* background-size: cover; */
+      background-position: bottom;
+      background-color: lightgray;      
     }
 
     /* 카테고리/중간버튼 스타일 시작 */
@@ -129,28 +144,26 @@
     }
 
     .category .address ul li:nth-child(1) {
-      margin-right: 1px;
+      margin-right: 5px;
     }
 
     .category .order-btn {
-      display: flex;
-      justify-content: space-between;
       margin-top: 23px;
       height: 100px;
     }
 
     .category .order-btn ul {
-      width: 625px;
+      width: 100%;
       display: flex;
-      justify-content: left;
+      justify-content: center;
       background-color: white;
       border-radius: 8px;
       box-shadow: 0 0 5px 0 rgba(90, 91, 95, 0.4);
     }
 
     .category .order-btn ul div {
-      margin-top: 15px;
-      margin-left: 15px;
+      margin-top: 10px;
+      margin-left: -10px;
     }
 
     .category .order-btn ul:hover {
@@ -161,29 +174,21 @@
 
     .category .order-btn ul li:nth-child(2) {
       font-size: 30px;
-      margin: 27px 0 0 170px;
+      margin: 22px 0 0 25px;
     }
 
-    .category .order-btn ul>li .arrow1 {
-      margin-left: 180px;
-      color: #cf152d;
-    }
-
-    .category .order-btn ul>li .arrow2 {
-      margin-left: 190px;
-      color: #cf152d;
-    }
-
-    .category .order-btn ul:nth-child(1) li img {
-      width: 80px;
-      height: 80px;
-    }
-
-    .category .order-btn ul:nth-child(2) li img {
-      width: 70px;
+    .category .order-btn ul li img {
+      width: 100%;
       height: 70px;
     }
 
+    .category .order-btn ul>li .arrow {
+      margin-left: 35px;
+      color: #cf152d;
+      font-size: 35px;
+    }
+
+    /* 979FAF 303e58 */
 
     /* 이벤트/할인 섹션 스타일 시작 */
     main section {
@@ -300,102 +305,89 @@
     <nav>
       <div class="nav-wrap">
         <ul>
-          <li>메뉴</li>
-          <li>이벤트</li>
-          <li>매장</li>
+          <a href="#"><li>메뉴</li></a>
+          <a href="#"><li>이벤트</li></a>
+          <a href="#"><li>매장</li></a>
         </ul>
         <div id="logo">
-          <h1>로고 들어갈 곳</h1>
+          <a href="./"><img src="./images/logo.PNG" alt=""></a>
         </div>
         <ul>
-          <li>회원가입</li>
-          <li>로그인</li>
-          <div><img src="./images/cart.png" alt=""></div>
-          <div><img src="./images/person.png" alt=""></div>
+          <a href="./create_user.html"><li>회원가입</li></a>
+          <a href="./login.html"><li>로그인</li></a>
+            <div><img src="./images/cart.png" alt=""></div>
+            <div><img src="./images/person.png" alt=""></div>
         </ul>
       </div>
     </nav>
-
-    <div class="bg">
-      <div class="bg-wrap">
-        <div class="bg-content">
-          <!-- <img src="./images/banner.png" alt=""> -->
-        </div>
-      </div>
-    </div>
   </header>
 
+
   <main>
+
+    <div class="bg"></div>
+
     <div class="category-wrap">
       <div class="category">
         <div class="address">
           <ul>
             <li><img src="./images/location.png" alt=""></li>
-            <li>기본 주소를 등록해 주세요.</li>
+            <li>매장 위치를 등록해 주세요.</li>
           </ul>
         </div>
 
         <div class="order-btn">
           <ul>
             <div>
-              <li><img src="./images/motorbike2.png" alt=""></li>
+              <li><img src="./images/pizzaMan.png" alt=""></li>
             </div>
-            <li>배달 주문<i class="fa-regular fa-circle-right arrow1"></i></li>
-          </ul>
-
-          <ul>
-            <div>
-              <li><img src="./images/togo.png" alt=""></li>
-            </div>
-            <li>포장 주문<i class="fa-regular fa-circle-right arrow2"></i></li>
+            <li>주문하러 가기<i class="fa-regular fa-circle-right arrow"></i></li>
           </ul>
         </div>
-
       </div>
-    </div>
 
-    <section>
-      <div class="section-wrap">
+      <section>
+        <div class="section-wrap">
 
-        <div class="section-title">
-          <h2>코리아 피자</h2>
-          <h1>이벤트/할인</h1>
-          <h1>안내</h1>
-          <div></div>
+          <div class="section-title">
+            <h2>코리아 피자</h2>
+            <h1>이벤트/할인</h1>
+            <h1>안내</h1>
+            <div></div>
+          </div>
+
+          <div class="section-content">
+            <div class="img-wrap">
+              <div class="img-box">
+                <img src="" alt="메인이미지1">
+              </div>
+              <div class="img-content">
+                <h2 class="item-name">광고1</h2>
+              </div>
+            </div>
+
+            <div class="img-wrap">
+              <div class="img-box">
+                <img src="" alt="메인이미지2">
+              </div>
+              <div class="img-content">
+                <h2 class="item-name">광고2</h2>
+              </div>
+            </div>
+
+            <div class="img-wrap">
+              <div class="img-box">
+                <img src="" alt="메인이미지3">
+              </div>
+              <div class="img-content">
+                <h2 class="item-name">광고3</h2>
+              </div>
+            </div>
+
+          </div>
+
         </div>
-
-        <div class="section-content">
-          <div class="img-wrap">
-            <div class="img-box">
-              <img src="" alt="메인이미지1">
-            </div>
-            <div class="img-content">
-              <h2 class="item-name">광고1</h2>
-            </div>
-          </div>
-
-          <div class="img-wrap">
-            <div class="img-box">
-              <img src="" alt="메인이미지2">
-            </div>
-            <div class="img-content">
-              <h2 class="item-name">광고2</h2>
-            </div>
-          </div>
-
-          <div class="img-wrap">
-            <div class="img-box">
-              <img src="" alt="메인이미지3">
-            </div>
-            <div class="img-content">
-              <h2 class="item-name">광고3</h2>
-            </div>
-          </div>
-
-        </div>
-
-      </div>
-    </section>
+      </section>
   </main>
 
   <footer>
