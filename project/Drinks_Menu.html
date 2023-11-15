@@ -165,7 +165,11 @@
 
     section .section-wrap .section-content .img-box img {
       width: 100%;
-      margin-top: 50px;
+    }
+
+    /* 이미지 컨텐츠 시작 */
+    .section-wrap .section-content .img-content .item-name {
+      margin-top: 10px;
     }
 
     .section-wrap .section-content h2 {
@@ -174,27 +178,33 @@
 
     .section-wrap .section-content p {
       font-size: 18px;
-      margin-top: 50px;
+      margin-top: 20px;
       text-align: center;
       color: gray;
-    }
-
-    .section-wrap .section-content .img-content .item-name{
-      margin-top: 30px;
     }
 
     .section-wrap .section-content .img-content ul {
       display: flex;
       justify-content: center;
-      margin-top: 50px;
+      margin-top: 10px;
     }
 
     .section-wrap .section-content .img-content ul li {
       font-size: 20px;
-      margin: 10px;
-      padding: 20px;
+      margin: 10px 0 10px 5px;
+      padding: 15px;
       border: 2px solid rgba(204, 204, 204, 0.3);
-      border-radius: 30px;
+      border-radius: 20px;
+    }
+
+    .section-wrap .section-content .img-content ul li:nth-child(1) {
+      border: 0;
+    }
+
+    .section-wrap .section-content .img-content ul li:nth-child(2):hover {
+      color: white;
+      background-color: #cf152d;
+      cursor: pointer;
     }
 
     .section-wrap .section-content .img-content ul li > span {
@@ -202,20 +212,15 @@
     }
 
     .section-wrap .section-content .img-content ul li span span {
-      border-left: 1px solid rgba(204, 204, 204, 0.5);
-      border-right: 1px solid rgba(204, 204, 204, 0.5);
-      padding: 20px;
       margin: 0 10px;
     }
 
     .section-wrap .section-content .img-content ul li span a {
       width: 100%;
-    }
-
-    .section-wrap .section-content .img-content ul li:hover {
-      color: white;
-      background-color: #cf152d;
-      cursor: pointer;
+      text-align: center;
+      border-radius: 40%;
+      border: 2px solid rgba(204, 204, 204, 0.3);
+      padding: 13px 15px 16px;
     }
 
     /* footer 시작 */
@@ -345,7 +350,7 @@
 
           <div class="img-wrap">
             <div class="img-box">
-              <img src="./images/sidePic/drinks2.jpg" alt="음료2">
+              <img src="./images/drinks2.jpg" alt="음료2">
             </div>
             <div class="img-content">
               <h2 class="item-name">음료2</h2>
